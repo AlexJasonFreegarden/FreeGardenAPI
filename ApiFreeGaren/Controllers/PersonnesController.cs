@@ -19,7 +19,9 @@ namespace ApiFreeGaren.Controllers
         // GET: api/Personnes
         public IQueryable<Personne> GetPersonnes()
         {
-            return db.Personnes;
+            db.Personnes.Find(1);
+            IQueryable<Personne> personnes = db.Personnes;
+            return personnes;
         }
 
         // GET: api/Personnes/5

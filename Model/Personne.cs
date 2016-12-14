@@ -14,17 +14,17 @@ namespace Model
         public String Prenom { get; set; }
         public String MotDePasse { get; set; }
         public DateTime DateNaissance { get; set; }
-        public ICollection<String> RemarqueComportement { get; set; }
+        public IList<String> RemarqueComportement { get; set; }
         public String Mail { get; set; }
         public long NumTel { get; set; }
-        public virtual ICollection<GroupeJardin> GroupesJardin { get; set; }
+        public virtual IList<GroupeJardin> GroupesJardin { get; set; }
         [Timestamp]
         public byte[] RowVersion { get; set; }
 
         public Personne()
         {
-            GroupesJardin = new HashSet<GroupeJardin>();
-            RemarqueComportement = new HashSet<String>();
+            GroupesJardin = new List<GroupeJardin>();
+            RemarqueComportement = new List<String>();
         }
     }
 }

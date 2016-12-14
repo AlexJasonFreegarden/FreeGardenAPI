@@ -12,7 +12,7 @@ namespace Model
         public DbSet<Personne> Personnes { get; set; }
         public DbSet<GroupeJardin> GroupesJardin { get; set; }
         public JardinContext()
-            : base(@"Data Source=(localdb)\MSSQLLocalDb;Initial Catalog=ApiFreeGarden;")
+            : base("DefaultConnection")
         {
         }
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
